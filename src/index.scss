@@ -1,5 +1,16 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+body, html
+{
+    min-height: 100vh;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Tinos', serif;
+}
+
+*
+{
+    box-sizing: border-box;
 }
