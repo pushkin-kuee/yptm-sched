@@ -1,0 +1,38 @@
+@import '../timetable.constants.scss';
+
+.timetable
+{
+    &__events-in-location
+    {
+        width: $columnWidth;
+
+        padding: $columnPadding;
+    }
+
+    &__events-in-location-content
+    {
+        position: relative;
+    }
+
+    &__location-header
+    {
+        position: sticky;
+
+        top: 0;
+        margin-top: -$columnPadding;
+
+        z-index: 1;
+
+        background-color: white;
+    }
+}
+
+@media (max-width: 420px) {
+    .timetable
+    {
+        &__events-in-location
+        {
+            width: $columnWidthMobile;
+        }
+    }
+}

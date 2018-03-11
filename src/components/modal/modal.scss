@@ -1,0 +1,76 @@
+.modal
+{
+    display: flex;
+
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+
+    &__close
+    {
+        color: black;
+        font-style: normal;
+
+        &:hover
+        {
+            &::after
+            {
+                opacity: 1;
+                transition: none;
+            }
+        }
+
+        &::after
+        {
+            position: absolute;
+
+            top: 15px;
+            right: 13px;
+
+            font-size: 30px;
+
+            content: '\2715';
+
+            transition: 0.2s ease-in opacity;
+
+            opacity: 0.2;
+
+            cursor: pointer;
+        }
+    }
+
+    &__content
+    {
+        position: relative;
+
+        max-height: 100vh;
+
+        overflow-y: auto;
+    }
+
+    &:focus
+    {
+        outline: none;
+    }
+
+    &__overlay
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 1;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.body_modal-open
+{
+    overflow: hidden;
+}

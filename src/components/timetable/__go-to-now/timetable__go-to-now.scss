@@ -1,0 +1,59 @@
+$iconSize: 36px;
+$buttonSize: $iconSize * 1.8;
+
+$iconSizeMobile: 36px;
+$buttonSizeMobile: $iconSizeMobile * 1.8;
+
+.timetable
+{
+    &__go-to-now
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-width: $iconSize * 1.8;
+        min-height: $iconSize * 1.8;
+
+        border-radius: 100%;
+
+        background-color: #ffefef;
+
+        transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) box-shadow;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+        &:hover
+        {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__go-to-now-icon
+    {
+        width: $iconSize;
+        height: $iconSize;
+
+        g
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .timetable
+    {
+        &__go-to-now
+        {
+            min-width: $buttonSizeMobile;
+            min-height: $buttonSizeMobile;
+        }
+
+        &__go-to-now-icon
+        {
+            width: $iconSizeMobile;
+            height: $iconSizeMobile;
+        }
+    }
+}

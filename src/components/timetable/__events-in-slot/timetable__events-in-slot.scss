@@ -1,0 +1,25 @@
+@import '../timetable.constants.scss';
+
+.timetable
+{
+    &__events-in-slot
+    {
+        position: absolute;
+
+        width: 100%;
+        height: $slotHeight * 3 - 10px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__event
+    {
+        flex-grow: 1;
+
+        & + &
+        {
+            margin-top: 10px;
+        }
+    }
+}

@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { withRouter, Route } from 'react-router-dom';
 import { bindActionCreators, compose } from 'redux';
 
-import Main from '../main/main';
 import Timetable from '../timetable/timetable';
 
+import EVENTS from '../../events.json';
+
 import { setEventData } from './redux/actions';
-import { EXAMPLE_EVENT_DATA } from '../../constants';
 
 import './app.css';
 
@@ -15,14 +15,13 @@ class App extends Component {
     componentWillMount() {
         const {setEventData} = this.props;
 
-        setEventData(EXAMPLE_EVENT_DATA);
+        setEventData(EVENTS);
     }
 
     render() {
         return (
             <div className="app">
-                <Route exact path="/" component={Main} />
-                <Route path="/timetable" component={Timetable} />
+                <Route exact path="/" component={Timetable} />
             </div>
         );
     }

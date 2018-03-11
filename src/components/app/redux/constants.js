@@ -1,0 +1,4 @@
+export const SET_ACTIVE_EVENT = 'APP.SET_ACTIVE_EVENT';
+export const SET_ACTIVE_TAG = 'APP.SET_ACTIVE_TAG';
+export const SET_EVENT_DATA = 'APP.SET_EVENT_DATA';
+export const UPDATE_NOW = 'APP.UPDATE_NOW';

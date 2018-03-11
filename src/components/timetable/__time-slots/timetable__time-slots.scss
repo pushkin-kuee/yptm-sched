@@ -1,0 +1,18 @@
+@import '../timetable.constants.scss';
+
+.timetable
+{
+    &__time-slots
+    {
+        padding-right: 10px;
+        min-width: $timeSlotsWidth + 10px;
+
+        text-align: right;
+    }
+
+    &__five-minute-slot
+    {
+        display: block;
+        min-height: $slotHeight;
+    }
+}

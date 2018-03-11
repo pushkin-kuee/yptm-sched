@@ -1,0 +1,9 @@
+$timeSlotsWidth: 45px;
+
+$columnWidth: 350px;
+$columnWidthMobile: calc(100vw - #{$timeSlotsWidth} - 30px);
+$columnPadding: 10px;
+
+$slotHeight: 140px;
+
+$headerHeight: 45px;

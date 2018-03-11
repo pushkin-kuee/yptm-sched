@@ -1,0 +1,51 @@
+@import '../timetable.constants.scss';
+
+.timetable
+{
+    &__now
+    {
+        pointer-events: none;
+
+        position: absolute;
+
+        left: $timeSlotsWidth + $columnPadding;
+
+        display: flex;
+
+        // &::before
+        // {
+        //     content: '';
+        //     display: block;
+
+        //     width: 8px;
+        //     height: 8px;
+        //     border-radius: 10px;
+
+        //     background-color: rgba(255, 0, 0, 0.3);
+
+        //     position: relative;
+        //     left: 50px;
+        //     top: -3px;
+        // }
+    }
+
+    &__now-line-segment
+    {
+        width: $columnWidth;
+
+        color: rgba(255, 0, 0, 0.1);
+        background-color: currentColor;
+
+        height: 2px;
+    }
+}
+
+@media (max-width: 420px) {
+    .timetable
+    {
+        &__now-line-segment
+        {
+            width: $columnWidthMobile;
+        }
+    }
+}

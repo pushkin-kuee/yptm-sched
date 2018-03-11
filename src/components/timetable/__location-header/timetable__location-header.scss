@@ -1,0 +1,56 @@
+@import '../timetable.constants.scss';
+
+.timetable
+{
+    &__location-header
+    {
+        cursor: pointer;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        height: $headerHeight;
+
+        white-space: nowrap;
+
+        &:hover
+        {
+            .timetable__location-description
+            {
+                transition: none;
+
+                pointer-events: unset;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__location-title
+    {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &__location-description
+    {
+        pointer-events: none;
+        width: 100%;
+
+        padding: 5px;
+
+        white-space: normal;
+
+        position: absolute;
+        top: $headerHeight;
+
+        opacity: 0;
+
+        transition: 0.2s ease-in opacity;
+
+        background-color: #FFFFFF;
+    }
+}

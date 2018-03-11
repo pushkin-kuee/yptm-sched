@@ -1,0 +1,56 @@
+@import './timetable.constants.scss';
+
+.timetable
+{
+    &__time-slots
+    {
+        margin-top: $headerHeight;
+
+        background-color: white;
+
+        z-index: 1;
+    }
+
+    &__events
+    {
+        z-index: 0;
+    }
+
+    &__content
+    {
+        display: flex;
+    }
+
+    &__event-info
+    {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    &__go-to-now
+    {
+        position: fixed;
+
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 420px) {
+    .timetable
+    {
+        &__event-info
+        {
+            padding: 30px;
+        }
+    }
+}
+
+@supports (position: sticky) {
+    .timetable__time-slots
+    {
+        position: sticky;
+
+        left: 0;
+    }
+}
