@@ -36,8 +36,6 @@ class TimetableNow extends PureComponent {
             return null;
         }
 
-        now.setHours(12);
-
         const offsetFromTop = slotsFromStart(
             now, START_HOUR, MINUTES_IN_SLOT
         ) * SLOT_HEIGHT;

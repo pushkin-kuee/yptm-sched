@@ -1,0 +1,17 @@
+.event-info
+{
+    &__location
+    {
+        font-style: italic;
+    }
+
+    &__header-data
+    {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        flex-wrap: wrap;
+    }
+}

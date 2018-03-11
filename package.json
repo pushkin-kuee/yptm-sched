@@ -25,12 +25,13 @@
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
+    "setup-cname": "echo 'yptm-2018.live-museum.club' > build/CNAME",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
+    "build": "npm-run-all build-css build-js setup-cname",
     "flow": "flow",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

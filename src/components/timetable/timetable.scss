@@ -2,6 +2,8 @@
 
 .timetable
 {
+    display: flex;
+
     &__time-slots
     {
         margin-top: $headerHeight;
@@ -43,6 +45,11 @@
         {
             padding: 30px;
         }
+    }
+
+    .modal__close
+    {
+        right: 25px;
     }
 }
 

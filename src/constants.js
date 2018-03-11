@@ -13,6 +13,15 @@ export const LOCATION_LABELS = Object
     .keys(LOCATIONS)
     .map(key => LOCATIONS[key]);
 
+export const LOCATION_NAMES = {
+    [LOCATIONS.MAIN_BUILDING]: 'Главное здание',
+    [LOCATIONS.TED_LECTORIUM]: 'Площадка TED-talk',
+    [LOCATIONS.GALLERY]: 'Галерея',
+    [LOCATIONS.MUSEYON]: 'Мусейон',
+    [LOCATIONS.GAMES_IN_MAIN_BUILDING]: 'Весь день в Главном здании',
+    [LOCATIONS.GAMES_IN_GALLERY]: 'Весь день в Галерее'
+};
+
 export const START_HOUR = 11;
 export const END_HOUR = 18.75;
 

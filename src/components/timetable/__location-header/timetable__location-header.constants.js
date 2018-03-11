@@ -1,15 +1,6 @@
 import React from 'react';
 import { LOCATIONS } from '../../../constants';
 
-export const LOCATION_NAMES = {
-    [LOCATIONS.MAIN_BUILDING]: 'Главное здание',
-    [LOCATIONS.TED_LECTORIUM]: 'Площадка TED-talk',
-    [LOCATIONS.GALLERY]: 'Галерея',
-    [LOCATIONS.MUSEYON]: 'Мусейон',
-    [LOCATIONS.GAMES_IN_MAIN_BUILDING]: 'Весь день в главном здании',
-    [LOCATIONS.GAMES_IN_GALLERY]: 'Весь день в галерее'
-};
-
 export const LOCATION_DESCRIPTIONS = {
     [LOCATIONS.MAIN_BUILDING]: [
         <p key="first">
