@@ -11,22 +11,6 @@
         left: $timeSlotsWidth + $columnPadding;
 
         display: flex;
-
-        // &::before
-        // {
-        //     content: '';
-        //     display: block;
-
-        //     width: 8px;
-        //     height: 8px;
-        //     border-radius: 10px;
-
-        //     background-color: rgba(255, 0, 0, 0.3);
-
-        //     position: relative;
-        //     left: 50px;
-        //     top: -3px;
-        // }
     }
 
     &__now-line-segment

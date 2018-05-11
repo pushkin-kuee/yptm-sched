@@ -5,7 +5,7 @@ import scrollToComponent from 'react-scroll-to-component';
 
 import { SLOT_HEIGHT } from '../timetable.constants';
 
-import { START_HOUR, MINUTES_IN_SLOT } from '../../../constants';
+import { END_HOUR, MINUTES_IN_SLOT, START_HOUR } from '../../../constants';
 import { slotsFromStart } from '../../../utils';
 
 import './timetable__now.css';
@@ -36,8 +36,11 @@ class TimetableNow extends PureComponent {
             return null;
         }
 
+        const end_time = new Date();
+        end_time.setHours(END_HOUR, (END_HOUR - Math.floor(END_HOUR)) * 60, 0, 0);
+
         const offsetFromTop = slotsFromStart(
-            now, START_HOUR, MINUTES_IN_SLOT
+            new Date(Math.min(now, end_time)), START_HOUR, MINUTES_IN_SLOT
         ) * SLOT_HEIGHT;
 
         return (
