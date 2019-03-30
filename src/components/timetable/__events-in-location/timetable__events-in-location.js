@@ -9,22 +9,24 @@ import LocationHeader from '../__location-header/timetable__location-header';
 import './timetable__events-in-location.css';
 
 const TimetableEventsInLocation = ({location, eventsBySlots}) => (
-    <div className={b('timetable', 'events-in-location', {location})}>
-        <LocationHeader location={location} />
-        <div className="timetable__events-in-location-content">
-            {Object.keys(eventsBySlots).map((slot, index) => {
-                const eventsInSlot = eventsBySlots[slot];
+    (eventsBySlots || null) && (
+        <div className={b('timetable', 'events-in-location', {location})}>
+            <LocationHeader location={location} />
+            <div className="timetable__events-in-location-content">
+                {Object.keys(eventsBySlots).map((slot, index) => {
+                    const eventsInSlot = eventsBySlots[slot];
 
-                return (
-                    <EventsInSlot
-                        eventsInSlot={eventsInSlot}
-                        key={index}
-                        slotIndex={index}
-                        timeSlot={slot} />
-                );
-            })}
+                    return (
+                        <EventsInSlot
+                            eventsInSlot={eventsInSlot}
+                            key={index}
+                            slotIndex={index}
+                            timeSlot={slot} />
+                    );
+                })}
+            </div>
         </div>
-    </div>
+    )
 );
 
 TimetableEventsInLocation.propTypes = {
