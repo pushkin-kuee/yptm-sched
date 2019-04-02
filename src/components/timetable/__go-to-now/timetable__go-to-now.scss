@@ -19,6 +19,8 @@ $buttonSizeMobile: $iconSizeMobile * 1.8;
 
         background-color: #FFE6E6;
 
+        cursor: pointer;
+
         transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
         transition-property: box-shadow, background-color;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);

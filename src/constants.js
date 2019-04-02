@@ -23,7 +23,7 @@ export const LOCATION_NAMES = {
 };
 
 export const START_HOUR = 11;
-export const END_HOUR = 18.75;
+export const END_HOUR = 19.25;
 
 export const MINUTES_IN_SLOT = 5;
 
