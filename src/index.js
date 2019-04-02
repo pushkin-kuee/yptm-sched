@@ -7,7 +7,7 @@ import { combineReducers, createStore } from 'redux'
 import './index.css';
 import App from './components/app/app';
 import appReducer from './components/app/redux/reducers';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import { unregister } from './registerServiceWorker';
 
 const rootReducer = combineReducers({
@@ -23,5 +23,5 @@ ReactDOM.render(
         </BrowserRouter>
     </Provider>,
     document.getElementById('root'));
-// registerServiceWorker();
-unregister();
+registerServiceWorker();
+// unregister();
